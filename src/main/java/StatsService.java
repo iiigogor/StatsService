@@ -1,5 +1,5 @@
 public class StatsService {
-    public int calculateSumm(int[] sales) {
+    public int Summ(int[] sales) {
         int summ = 0;
         for (int sale : sales) {
             summ += sale;
@@ -8,13 +8,11 @@ public class StatsService {
     }
 
     public int calculateAverage(int[] sales) {
-        int summ = 0;
-        for (int sale : sales) {
-            summ += sale;
-        }
-        int avrg = (summ / sales.length);
+
+        int avrg = (Summ(sales) / sales.length);
         return avrg;
     }
+
 
     public int findMax(int[] sales) {
         int month = 0;
@@ -42,11 +40,7 @@ public class StatsService {
 
     public int findBelowAverage(int[] sales) {
         int number = 0;
-        int summ = 0;
-        for (int sale : sales) {
-            summ += sale;
-        }
-        int avrg = (summ / sales.length);
+        int avrg = (Summ(sales) / sales.length);
         for (int sale : sales) {
             if (sale < avrg) {
                 number += 1;
@@ -57,11 +51,7 @@ public class StatsService {
 
     public int findAboveAverage(int[] sales) {
         int number = 0;
-        int summ = 0;
-        for (int sale : sales) {
-            summ += sale;
-        }
-        int avrg = (summ / sales.length);
+        int avrg = (Summ(sales) / sales.length);
         for (int sale : sales) {
             if (sale > avrg) {
                 number += 1;
