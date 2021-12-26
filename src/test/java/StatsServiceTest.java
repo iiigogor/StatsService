@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class StatsServiceTest {
 
     @Test
-    void calculateSumm() {
+    void calcSumm() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.Summ(sales);
+        int actual = service.calcSumm(sales);
         assertEquals(180, actual);
     }
 

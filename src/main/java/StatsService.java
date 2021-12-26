@@ -1,5 +1,5 @@
 public class StatsService {
-    public int Summ(int[] sales) {
+    public int calcSumm(int[] sales) {
         int summ = 0;
         for (int sale : sales) {
             summ += sale;
@@ -9,7 +9,7 @@ public class StatsService {
 
     public int calculateAverage(int[] sales) {
 
-        int avrg = (Summ(sales) / sales.length);
+        int avrg = (calcSumm(sales) / sales.length);
         return avrg;
     }
 
@@ -40,7 +40,7 @@ public class StatsService {
 
     public int findBelowAverage(int[] sales) {
         int number = 0;
-        int avrg = (Summ(sales) / sales.length);
+        int avrg = (calcSumm(sales) / sales.length);
         for (int sale : sales) {
             if (sale < avrg) {
                 number += 1;
@@ -51,7 +51,7 @@ public class StatsService {
 
     public int findAboveAverage(int[] sales) {
         int number = 0;
-        int avrg = (Summ(sales) / sales.length);
+        int avrg = (calcSumm(sales) / sales.length);
         for (int sale : sales) {
             if (sale > avrg) {
                 number += 1;
